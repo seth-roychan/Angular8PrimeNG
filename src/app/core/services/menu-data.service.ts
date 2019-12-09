@@ -18,6 +18,24 @@ export class MenuDataService {
                 Label: 'Home', Icon: 'fa-home', RouterLink: '/main/dashboard', Childs: null, IsChildVisible: false
             },
             {
+              Label: 'Invoice', Icon: 'fa-home', RouterLink: '/main/dashboard', Childs: null, IsChildVisible: false
+            },
+            {
+              Label: 'Setting', Icon: 'fa-home', RouterLink: '/main/dashboard', Childs: null, IsChildVisible: false
+            },
+            {
+              Label: 'Report', Icon: 'fa-home', RouterLink: '/main/dashboard', Childs: null, IsChildVisible: false
+            },
+            {
+              Label: 'Purchase', Icon: 'fa-home', RouterLink: '/main/dashboard', Childs: null, IsChildVisible: false
+            },
+            {
+              Label: 'Inventory', Icon: 'fa-home', RouterLink: '/main/dashboard', Childs: null, IsChildVisible: false
+            },
+            {
+              Label: 'Account', Icon: 'fa-home', RouterLink: '/main/dashboard', Childs: null, IsChildVisible: false
+            },
+            {
                 Label: 'Employees', Icon: 'fa-users', RouterLink: '/main/employees', Childs: null, IsChildVisible: false
             },
             {
