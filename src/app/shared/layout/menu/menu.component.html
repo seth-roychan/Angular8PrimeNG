@@ -4,7 +4,7 @@
             <li *ngFor="let menu of list">
                 <a (click)="onMenuClick(menu)" [ngClass]="{'active': selectedItem == menu.Label}">
                     <i class="fa fa-fw" [ngClass]="menu.Icon"></i>
-                    {{menu.Label | translate}}
+                    <span>{{menu.Label | translate}}</span>
                     <i class="fa right" *ngIf="menu.Childs != null"
                         [ngClass]="{'fa-angle-down': !menu.IsChildVisible,'fa-angle-up': menu.IsChildVisible }"></i>
                 </a>

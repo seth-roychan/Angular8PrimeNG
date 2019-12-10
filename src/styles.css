@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
 .theme-light {
     --main-background: #ffffff;
     --header-footer-color: #000000;
@@ -278,6 +280,8 @@ html, body {
 .np-menu {
     padding: 5px;
     margin: 0px;
+    font-family: 'Noto Sans TC';
+    font-size: 18px;
 }
 
 .np-menu li a {
@@ -297,6 +301,8 @@ html, body {
     width: 25px;
     text-align: center;
 }
+
+
 
 .np-menu li ul {
     display: block;
