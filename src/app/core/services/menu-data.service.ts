@@ -15,16 +15,16 @@ export class MenuDataService {
     getMenuList(): CustomMenuItem[] {
         return [
             {
-              Label: '統計訊息', Icon: 'fa-home', RouterLink: '/main/dashboard', Childs: null, IsChildVisible: false
+              Label: '統計訊息', Icon: 'fa-area-chart', RouterLink: '/main/dashboard', Childs: null, IsChildVisible: false
             },
             {
-              Label: '銷售管理', Icon: 'fa-home', RouterLink: '/main/dashboard', Childs: null, IsChildVisible: false
+              Label: '銷售管理', Icon: 'fa-cart-plus', RouterLink: '/main/dashboard', Childs: null, IsChildVisible: false
             },
             {
-              Label: '採購管理', Icon: 'fa-home', RouterLink: '/main/dashboard', Childs: null, IsChildVisible: false
+              Label: '採購管理', Icon: 'fa-suitcase', RouterLink: '/main/dashboard', Childs: null, IsChildVisible: false
             },
             {
-              Label: '庫存管理', Icon: 'fa-home', RouterLink: '/main/dashboard', Childs: null, IsChildVisible: false
+              Label: '庫存管理', Icon: 'fa-puzzle-piece', RouterLink: '/main/dashboard', Childs: null, IsChildVisible: false
             },
             {
               Label: '結算賬目', Icon: 'fa-home', RouterLink: null, Childs: [
@@ -45,7 +45,7 @@ export class MenuDataService {
               ], IsChildVisible: false
             },
             {
-              Label: '基本設定', Icon: 'fa-home', RouterLink: null, Childs: [
+              Label: '基本設定', Icon: 'fa-wrench', RouterLink: null, Childs: [
                 { Label: '客戶設定', RouterLink: null, Childs: [
                   { Label: '客戶類別', RouterLink: null, Childs: null, IsChildVisible: false },
                   { Label: '客戶設定', RouterLink: null, Childs: null, IsChildVisible: false },
@@ -53,23 +53,23 @@ export class MenuDataService {
                   { Label: '區域設定', RouterLink: null, Childs: null, IsChildVisible: false }
                   ], IsChildVisible: false
                 },
-                { Label: '供應商設定', Icon: 'fa-home', RouterLink: null, Childs: [
+                { Label: '供應商設定', Icon: 'fa-pagelines', RouterLink: null, Childs: [
                   { Label: 'Menu Level', RouterLink: null, Childs: null, IsChildVisible: false },
                   { Label: 'Menu Level 1.2.2', RouterLink: null, Childs: null, IsChildVisible: false },
                   { Label: '客戶設定', RouterLink: null, Childs: null, IsChildVisible: false }
                   ], IsChildVisible: false
                 },
-                { Label: '用戶設定', Icon: 'fa-cart-plus', RouterLink: null, Childs: [
+                { Label: '用戶設定', Icon: 'fa-user', RouterLink: null, Childs: [
                   { Label: 'Menu Level 1.1', RouterLink: null, Childs: null, IsChildVisible: false },
                   { Label: 'Menu Level 1.2', RouterLink: null, Childs: null, IsChildVisible: false }
                   ], IsChildVisible: false
                 },
-                { Label: '貨物設定', Icon: 'fa-cart-plus', RouterLink: null, Childs: [
+                { Label: '貨物設定', Icon: 'fa-cubes', RouterLink: null, Childs: [
                   { Label: 'Menu Level 1.1', RouterLink: null, Childs: null, IsChildVisible: false },
                   { Label: 'Menu Level 1.2', RouterLink: null, Childs: null, IsChildVisible: false }
                   ], IsChildVisible: false
                 },
-                { Label: '內容設定', Icon: 'fa-cart-plus', RouterLink: null , Childs: [
+                { Label: '內容設定', Icon: 'fa-cogs', RouterLink: null , Childs: [
                   { Label: 'Menu Level 1.1', RouterLink: null, Childs: null, IsChildVisible: false },
                   { Label: 'Menu Level 1.2', RouterLink: null, Childs: null, IsChildVisible: false }
                   ], IsChildVisible:false
@@ -77,7 +77,7 @@ export class MenuDataService {
               ], IsChildVisible: false
             },
             {
-              Label: '進階功能', Icon: 'fa-users', RouterLink: '/main/employees', Childs: [
+              Label: '進階功能', Icon: 'fa-compass', RouterLink: '/main/employees', Childs: [
                 { Label: 'Departments', Icon: 'fa-sitemap', RouterLink: '/main/departments', Childs: null, IsChildVisible: false },
                 { Label: 'ContactUs', Icon: 'fa-envelope', RouterLink: '/main/contactus', Childs: null, IsChildVisible: false },
                 { Label: 'Error 404', Icon: 'fa-exclamation-triangle', RouterLink: '/error', Childs: null, IsChildVisible: false }
