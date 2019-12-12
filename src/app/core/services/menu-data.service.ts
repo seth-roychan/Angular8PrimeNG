@@ -68,9 +68,9 @@ export class MenuDataService {
                   ]
                 },
                 { Label: '用戶設定', Icon: 'fa-cart-plus', IsChildVisible: false, RouterLink: null, Childs: [
-                  { Label: '用戶', Icon: 'fa-home', RouterLink: null, Childs: null, IsChildVisible: false },
+                  { Label: '用戶', Icon: 'fa-home', RouterLink: '/main/employees', Childs: null, IsChildVisible: false },
                   { Label: '群組設定', Icon: 'fa-home', RouterLink: null, Childs: null, IsChildVisible: false },
-                  { Label: '部門設定', Icon: 'fa-home', RouterLink: null, Childs: null, IsChildVisible: false }
+                  { Label: '部門設定', Icon: 'fa-home', RouterLink: '/main/departments', Childs: null, IsChildVisible: false }
                   ]
                 },
                 { Label: '貨物設定', Icon: 'fa-cart-plus', IsChildVisible: false, RouterLink: null, Childs: [
