@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class DepartmentDataService {
 
-    departments: any[];
+    departments: Department[];
 
     PHP_API_SERVER = 'http://seafoodpos';
     constructor(private httpClient: HttpClient) {}
