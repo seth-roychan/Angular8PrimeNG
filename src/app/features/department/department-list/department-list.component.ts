@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DepartmentDataService } from 'src/app/features/department/department-data.service';
 import { Router } from '@angular/router';
-import { RouteStateService } from 'src/app//core/services/route-state.service';
+import { RouteStateService } from 'src/app/core/services/route-state.service';
 
 @Component({
   selector: 'app-department-list',
@@ -16,12 +16,13 @@ export class DepartmentListComponent implements OnInit {
 
   constructor(private departmentService: DepartmentDataService, private routeStateService: RouteStateService, private router: Router) {
     this.columns = [
-      { field: 'Name', header: 'Name' },
+      { field: 'DepartmentID', header: 'ID' },
       { field: 'Description', header: 'Description' }];
   }
 
   ngOnInit() {
-    this.departments = this.departmentService.getAllDepartments();
+   //this.departments = this.departmentService.getAllDepartments();
+   this.departmentService.getAllDepartments().subscribe(result => this.departments = result);
   }
 
   goToDepartmentDetails(department: number) {
