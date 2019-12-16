@@ -9,7 +9,7 @@ import {catchError, tap, map} from 'rxjs/operators';
 })
 export class DepartmentDataService {
 
-    departments: any[];
+    departments: Department[];
 
     private PHP_API_SERVER = 'http://seafoodpos';
 
