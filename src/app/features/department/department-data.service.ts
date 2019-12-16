@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { Department } from 'src/app/core/models/department.model';
-import { Observable } from 'rxjs';
+import { Observable, throwError} from 'rxjs';
+import {catchError, tap, map} from 'rxjs/operators';
 
 @Injectable({
     providedIn: 'root',
@@ -10,7 +11,8 @@ export class DepartmentDataService {
 
     departments: any[];
 
-    PHP_API_SERVER = 'http://seafoodpos';
+    private PHP_API_SERVER = 'http://seafoodpos';
+
     constructor(private httpClient: HttpClient) {}
 
     // constructor() {
@@ -22,8 +24,39 @@ export class DepartmentDataService {
     // }
 
     getAllDepartments(): Observable<Department[]> {
-      return this.httpClient.get<Department[]>('http://seafoodpos/api/read.php');
+        return this.httpClient.get<Department[]>('http://seafoodpos/api/read.php').pipe(
+            tap(data => console.log('All: ' + JSON.stringify(data))),
+            catchError(this.handleError)
+        );
     }
+
+    private handleError(err: HttpErrorResponse) {
+
+        let errorMessage = '';
+        if (err.error instanceof ErrorEvent) {
+
+            errorMessage = `An error occurred: ${err.error.message}`;
+        } else {
+
+            errorMessage = `Server returned code: ${err.status}, error message is: ${err.message}`;
+        }
+        console.error(errorMessage);
+        return throwError(errorMessage);
+    }
+
+      // return this.httpClient.get<Department[]>('http://seafoodpos/api/read.php');
+
+      // this.httpClient.get('http://seafoodpos/api/read.php').subscribe((res : any[])=>{
+      //   console.log(res);
+      //   this.departments = res;
+      // });
+
+    //   return this.httpClient.get('http://seafoodpos/api/read.php')
+    //         .toPromise()
+    //         .then(res => <Department[]> res.data)
+    //         .then(data => { return data; });
+
+
 
 
     //readPolicies(): Observable<Policy[]>{

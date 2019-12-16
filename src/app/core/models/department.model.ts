@@ -1,6 +1,6 @@
 export class Department{
-    DepartmentID : number;
-    Description: string;
-    CreateDate : string;
+    departmentid : number;
+    description: string;
+    createdate : string;
 
 }

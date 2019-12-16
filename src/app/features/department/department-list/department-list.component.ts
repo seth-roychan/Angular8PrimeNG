@@ -14,19 +14,47 @@ export class DepartmentListComponent implements OnInit {
 
   departments: any[];
 
+  rowSelect;
+
+
   constructor(private departmentService: DepartmentDataService, private routeStateService: RouteStateService, private router: Router) {
     this.columns = [
-      { field: 'DepartmentID', header: 'ID' },
-      { field: 'Description', header: 'Description' }];
+      { field: 'departmentid', header: 'ID' },
+      { field: 'description', header: 'Description' },
+      { field: 'createdate', header: 'Create Date' },
+      { field: 'lastupdate', header: 'Last Update' },
+      { field: 'lastupdateuser', header: 'Last Update User' },
+      { field: 'priority', header: 'Priority' },
+      { field: 'defaultrecord', header: 'Default Record' },
+      { field: 'active', header: 'Active' }];
   }
 
-  ngOnInit() {
-   //this.departments = this.departmentService.getAllDepartments();
-   this.departmentService.getAllDepartments().subscribe(result => this.departments = result);
+  ngOnInit(): void {
+    //this.departments = this.departmentService.getAllDepartments();
+   this.departmentService.getAllDepartments().subscribe(
+      departments => {
+        this.departments = departments;
+        //this.filteredGames = this.games;
+    },
+    //error => this.errorMessage = <any>error
+  );
   }
 
   goToDepartmentDetails(department: number) {
     this.routeStateService.add("Department details", "/main/departments/department-detail", department, false);
+  }
+
+  onMouseEnter(rowData): void {
+    rowData.hover = true;
+  }
+
+  onMouseLeave(rowData): void {
+    rowData.hover = false;
+  }
+
+  onRowClick(event){
+    this.rowSelect = event.data;
+    console.log(event);
   }
 
 }

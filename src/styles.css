@@ -379,6 +379,19 @@ a {
     color: var(--header-footer-bg-color2)
 }
 
+
+
+.row-hover{
+  cursor: pointer;
+  background: #0073ea !important;
+  color: #ffffff !important;
+}
+
+p-button {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 /* Small devices (portrait tablets and large phones, 768px or less) */
 
 @media only screen and (max-width: 768px) {}
