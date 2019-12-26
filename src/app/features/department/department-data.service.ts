@@ -66,7 +66,7 @@ export class DepartmentDataService {
     getDepartmentById(id: number) {
         var data;
         this.departments.forEach(element => {
-            if (element.Id === id) {
+            if (element.departmentid === id) {
                 data = element;
             }
         });
@@ -76,7 +76,7 @@ export class DepartmentDataService {
     getDepartmentByName(name: string) {
         var data;
         this.departments.forEach(element => {
-            if (element.Name === name) {
+            if (element.description === name) {
                 data = element;
             }
         });
